@@ -4,16 +4,12 @@ import { NavLink } from "react-router-dom"
 const NavbarComponent = () => {
 
     return (
-        <div>
-            <Navbar>
-                <Navbar.Brand to="/">
-                    sangames
-                </Navbar.Brand>
-                <Navbar.Collapse>
-                    <NavLink> menu </NavLink>
-                </Navbar.Collapse>
-            </Navbar>
-        </div>
+
+        <Navbar className="flex justify-between bg-transparent text-white !px-24 py-5 xs:!px-5 md:!px-20 lg:!px-32">
+            <NavLink to="/" > sangames </NavLink>
+            <NavLink to="/menu-page"> menu </NavLink>
+        </Navbar>
+        
     )
 }
 
