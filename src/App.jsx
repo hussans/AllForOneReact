@@ -9,7 +9,7 @@ function App() {
       <div className="bg-[url('./assets/home.png')] bg-cover bg-center bg-no-repeat h-screen flex flex-col">
         <NavbarComponent />
         
-        <div className="flex flex-col items-center justify-center flex-grow -mt-20">
+        <div className="flex flex-col items-center justify-center flex-grow -mt-20 z-0">
           <img 
             src="../assets/homepage-text.png" 
             alt="All For One Image Text" 
