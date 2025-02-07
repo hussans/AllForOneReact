@@ -41,7 +41,7 @@ const MadLib = () => {
             <div className="flex-1 flex flex-col items-center p-4">
                 <h1 className="text-white text-4xl font-bold my-8"> MadLib </h1>
                 <div className="bg-white bg-opacity-50 rounded-lg p-6 mb-8 w-full max-w-4xl">
-                    <p className="text-center text-xl font-medium">{message}</p>
+                    <p className="text-center text-xl font-medium"> {message} </p>
                 </div>
                 <div className="w-full max-w-4xl flex flex-wrap gap-4 justify-between">
                     <div className="flex-1 min-w-[300px] space-y-4">

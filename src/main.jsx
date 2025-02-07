@@ -9,6 +9,7 @@ import SayHello from './components/SayHello.jsx'
 import AskQuestions from './components/AskQuestions.jsx'
 import AddNumbers from './components/AddNumbers.jsx'
 import MadLib from './components/MadLib.jsx'
+import OddEven from './components/OddEven.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/ask-questions" element={ <AskQuestions /> } />
         <Route path="/add-numbers" element={ <AddNumbers /> } />
         <Route path="/mad-lib" element={ <MadLib /> } />
+        <Route path="/odd-even" element={ <OddEven /> } />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

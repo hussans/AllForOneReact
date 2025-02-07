@@ -29,7 +29,7 @@ const MenuPage = () => {
                         <img className="min-w-[50px] drop-shadow-md" src="./assets/madlib.png" alt="Black Open Book Icon" /> 
                     </button>
                     </Link>
-                    <Link>
+                    <Link to="/odd-even">
                     <button className="bg-white rounded-2xl p-10 hover:bg-[#dadada] active:bg-[#bebebe] flex justify-center items-center shadow-md">
                         <img className="min-w-[50px] drop-shadow-md" src="./assets/odd-even.png" alt="Black Scale Icon" />
                     </button>
