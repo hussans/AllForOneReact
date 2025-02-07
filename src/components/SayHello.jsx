@@ -33,7 +33,7 @@ const SayHello = () => {
                 <div className="flex flex-col gap-4 w-full max-w-md">
                     <input type="text" placeholder="Enter name" className="px-4 py-2 rounded-lg focus:outline-none border-none"
                         value={name} onChange={(e) => setName(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && getGreeting()} />
-                    <button className="px-8 py-2 bg-[#E93635] text-white text-md font-semibold rounded-lg hover:bg-[#ffffff] hover:text-[#E93635] active:bg-[#E93635] active:text-white" onClick={getGreeting} >
+                    <button className="px-8 py-2 bg-[#E93635] text-white text-md font-semibold rounded-lg hover:bg-[#ffffff] hover:text-[#E93635] active:bg-[#E93635] active:text-white" onClick={getGreeting}>
                         Enter
                     </button>
                 </div>

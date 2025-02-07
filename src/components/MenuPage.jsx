@@ -34,27 +34,27 @@ const MenuPage = () => {
                         <img className="min-w-[50px] drop-shadow-md" src="./assets/odd-even.png" alt="Black Scale Icon" />
                     </button>
                     </Link>
-                    <Link>
+                    <Link to="/reverse-it">
                     <button className="bg-white rounded-2xl p-10 hover:bg-[#dadada] active:bg-[#bebebe] flex justify-center items-center shadow-md">
                         <img className="min-w-[50px] drop-shadow-md" src="./assets/reverse-it.png" alt="Black Reverse Icon" />
                     </button>
                     </Link>
-                    <Link>
+                    <Link to="/reverse-numbers">
                     <button className="bg-white rounded-2xl p-10 hover:bg-[#dadada] active:bg-[#bebebe] flex justify-center items-center shadow-md">
                         <img className="min-w-[50px] drop-shadow-md" src="./assets/reverse-numbers.png" alt="Black Reverse Icon with Numbers" />
                     </button>
                     </Link>
-                    <Link>
+                    <Link to="/eight-ball">
                     <button className="bg-white rounded-2xl p-10 hover:bg-[#dadada] active:bg-[#bebebe] flex justify-center items-center shadow-md">
                         <img className="min-w-[50px] drop-shadow-md" src="./assets/magic-eightball.png" alt="Black Magic Eight Ball Icon" />
                     </button>
                     </Link>
-                    <Link>
+                    <Link to="/greater-less">
                     <button className="bg-white rounded-2xl p-10 hover:bg-[#dadada] active:bg-[#bebebe] flex justify-center items-center shadow-md">
                         <img className="min-w-[50px] drop-shadow-md" src="./assets/question-sign.png" alt="Black Question Mark Icon" />
                     </button>
                     </Link>
-                    <Link>
+                    <Link to="/restaurant-picker">
                     <button className="bg-white rounded-2xl p-10 hover:bg-[#dadada] active:bg-[#bebebe] flex justify-center items-center shadow-md md:col-start-2 lg:col-auto">
                         <img className="min-w-[50px] drop-shadow-md" src="./assets/restaurant-picker.png" alt="Black Serving Plate icon" />
                     </button>
