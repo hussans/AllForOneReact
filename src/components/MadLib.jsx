@@ -35,7 +35,7 @@ const MadLib = () => {
     };
 
     return (
-        <div className="bg-[url('./assets/home.png')] bg-cover min-h-screen flex flex-col">
+        <div className="bg-[url('../public/assets/home.png')] bg-cover min-h-screen flex flex-col">
             <NavbarComponent />
 
             <div className="flex-1 flex flex-col items-center p-4">

@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-[url('./public/assets/home.png')] bg-cover bg-center bg-no-repeat h-screen flex flex-col">
+      <div className="bg-[url('../public/assets/home.png')] bg-cover bg-center bg-no-repeat h-screen flex flex-col">
         <NavbarComponent />
         
         <div className="flex flex-col items-center justify-center flex-grow -mt-20 z-0">
