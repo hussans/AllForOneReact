@@ -14,17 +14,17 @@ const MenuPage = () => {
                         <img className="min-w-[50px] drop-shadow-md" src="./assets/say-hello.png" alt="Black Quotation Marks Icon" />
                     </button>
                     </Link>
-                    <Link>
+                    <Link to="/ask-questions">
                     <button className="bg-white rounded-2xl p-10 hover:bg-[#dadada] active:bg-[#bebebe] flex justify-center items-center shadow-md">
                         <img className="min-w-[50px] drop-shadow-md" src="./assets/asking-questions.png" alt="Black Question Text Box Icon" />
                     </button>
                     </Link>
-                    <Link>
+                    <Link to="/add-numbers">
                     <button className="bg-white rounded-2xl p-10 hover:bg-[#dadada] active:bg-[#bebebe] flex justify-center items-center shadow-md">
                         <img className="min-w-[50px] drop-shadow-md" src="./assets/add-numbers.png" alt="Black Mathematical Plus Icon" /> 
                     </button>
                     </Link>
-                    <Link>
+                    <Link to="/mad-lib">
                     <button className="bg-white rounded-2xl p-10 hover:bg-[#dadada] active:bg-[#bebebe] flex justify-center items-center shadow-md">
                         <img className="min-w-[50px] drop-shadow-md" src="./assets/madlib.png" alt="Black Open Book Icon" /> 
                     </button>
