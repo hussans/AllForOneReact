@@ -5,7 +5,7 @@ const MenuPage = () => {
 
     return (
         <>
-            <div className="bg-[url('./assets/home.png')] bg-cover bg-center bg-no-repeat min-h-screen flex flex-col">
+            <div className="bg-[url('../public/assets/home.png')] bg-cover bg-center bg-no-repeat min-h-screen flex flex-col">
             <NavbarComponent />
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 w-full max-w-[700px] mx-auto mt-20 md:mt-32 lg:mt-52 p-4">
