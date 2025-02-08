@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import NavbarComponent from "./NavbarComponent";
+import { compareNumbers } from '../services/DataService';
 
 const GreaterLessThan = () => {
     const [num1, setNum1] = useState('');
     const [num2, setNum2] = useState('');
     const [message, setMessage] = useState('Enter two numbers to compare!');
 
-    const compareNumbers = async () => {
+    const handleCompare = async () => {
         const number1 = parseFloat(num1);
         const number2 = parseFloat(num2);
 
@@ -16,13 +17,7 @@ const GreaterLessThan = () => {
         }
 
         try {
-            const response = await fetch(
-                `https://minichallengetwotofour-endpoints.azurewebsites.net/LessThenGreaterThen/lessThenGreaterThen/${number1}/${number2}`
-            );
-            
-            if (!response.ok) throw new Error('Comparison failed');
-            
-            const result = await response.text();
+            const result = await compareNumbers(number1, number2);
             setMessage(result);
         } catch (error) {
             console.error('Error:', error);
@@ -46,9 +41,9 @@ const GreaterLessThan = () => {
                     </div>
                     <div className="space-y-2">
                         <p className="text-white"> Enter the second number: </p>
-                        <input type="text" placeholder="Enter number" className="w-full px-4 py-2 rounded-lg focus:outline-none border-none" value={num2} onChange={(e) => setNum2(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && compareNumbers()}/>
+                        <input type="text" placeholder="Enter number" className="w-full px-4 py-2 rounded-lg focus:outline-none border-none"  value={num2} onChange={(e) => setNum2(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && handleCompare()} />
                     </div>
-                    <button className="px-8 py-2 bg-[#E93635] text-white text-md font-semibold rounded-lg hover:bg-white hover:text-[#E93635] active:bg-[#E93635] active:text-white" onClick={compareNumbers}>
+                    <button className="px-8 py-2 bg-[#E93635] text-white text-md font-semibold rounded-lg hover:bg-white hover:text-[#E93635] active:bg-[#E93635] active:text-white" onClick={handleCompare}>
                         ENTER
                     </button>
                 </div>

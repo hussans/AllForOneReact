@@ -1,17 +1,14 @@
 import { useState } from 'react';
-import NavbarComponent from "./NavbarComponent";
 import { Link } from 'react-router-dom';
+import NavbarComponent from "./NavbarComponent";
+import { getChineseRestaurant } from '../services/DataService';
 
 const ChineseRes = () => {
-    const [message, setMessage] = useState('Click the button to get an chinese restaurant!');
+    const [message, setMessage] = useState('Click the button to get a Chinese restaurant!');
 
-    const getRestaurant = async () => {
+    const handleGetRestaurant = async () => {
         try {
-            const response = await fetch('https://allforoneweb-g4fsepduf4ftc9fs.westus-01.azurewebsites.net/RestaurantPicker/PickItalianChineseOrMexican/chinese');
-            
-            if (!response.ok) throw new Error('Failed to fetch restaurant');
-            
-            const result = await response.text();
+            const result = await getChineseRestaurant();
             setMessage(result);
         } catch (error) {
             console.error('Error:', error);
@@ -29,7 +26,7 @@ const ChineseRes = () => {
                     <p className="text-center text-xl font-medium"> {message} </p>
                 </div>
                 <div className="flex flex-col gap-4 w-full max-w-md">
-                    <button className="w-full px-8 py-2 bg-[#E93635] text-white text-md font-semibold rounded-lg hover:bg-white hover:text-[#E93635] active:bg-[#E93635] active:text-white" onClick={getRestaurant}>
+                    <button className="w-full px-8 py-2 bg-[#E93635] text-white text-md font-semibold rounded-lg hover:bg-white hover:text-[#E93635] active:bg-[#E93635] active:text-white" onClick={handleGetRestaurant}>
                         GET RESTAURANT
                     </button>
                     <Link to="/restaurant-picker" className="w-full">

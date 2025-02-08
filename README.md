@@ -8,7 +8,7 @@
 <br/>
 **Peer**: Alan Batres
 <br/>
-**Review**: The website functions perfectly with the data validation and works across all screen sizes. I like the aesthetic of your website it looks nice and clean Great Job:)
+**Review**: The website functions perfectly with the data validation and works across all screen sizes. I like the aesthetic of your website it looks nice and clean Great Job.
 <br/>
 <br/>
 **GitHub**: https://github.com/hussans/AllForOneReact

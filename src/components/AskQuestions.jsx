@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import NavbarComponent from "./NavbarComponent";
+import { askTwoQuestions } from '../services/DataService';
 
 const AskQuestions = () => {
     const [name, setName] = useState('');
@@ -13,14 +14,14 @@ const AskQuestions = () => {
         }
 
         try {
-            const response = await fetch(`https://allforoneweb-g4fsepduf4ftc9fs.westus-01.azurewebsites.net/TwoQuestion/TwoQuestions/${name}/${wakeTime}`);
-            const text = await response.text();
-            setMessage(text);
+            const result = await askTwoQuestions(name, wakeTime);
+            setMessage(result);
         } catch (error) {
             console.error('Error:', error);
             setMessage("Failed to get answer");
         }
     };
+
 
     return (
         <div className="bg-[url('../public/assets/home.png')] bg-cover min-h-screen flex flex-col">

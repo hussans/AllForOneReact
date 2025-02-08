@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import NavbarComponent from "./NavbarComponent";
+import { sumNumbers } from '../services/DataService';
 
 const AddNumbers = () => {
     const [num1, setNum1] = useState('');
@@ -16,8 +17,7 @@ const AddNumbers = () => {
         }
 
         try {
-            const response = await fetch(`https://allforoneweb-g4fsepduf4ftc9fs.westus-01.azurewebsites.net/AddTwoNumbers/Sum/${number1}/${number2}`);
-            const result = await response.text();
+            const result = await sumNumbers(number1, number2);
             setMessage(`${result}`);
         } catch (error) {
             console.error('Error:', error);

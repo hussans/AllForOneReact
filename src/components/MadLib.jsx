@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import NavbarComponent from "./NavbarComponent";
+import { generateMadLib } from '../services/DataService';
 
 const MadLib = () => {
     const [villageName, setVillageName] = useState('');
@@ -15,18 +16,26 @@ const MadLib = () => {
     const [message, setMessage] = useState('Your story will appear here!');
 
     const generateStory = async () => {
-        if (!villageName || !characterAdj || !classType || !characterName || !year || !treasureName || !mentorName || !companionName ||  !villainName || !eventLocation) {
+        if (!villageName || !characterAdj || !classType || !characterName || 
+            !year || !treasureName || !mentorName || !companionName ||  
+            !villainName || !eventLocation) {
             setMessage("Please fill all fields before generating!");
             return;
         }
 
         try {
-            const url = `https://allforoneweb-g4fsepduf4ftc9fs.westus-01.azurewebsites.net/Madlib/Adventure/${villageName}/${characterAdj}/{classType}/${characterName}/${year}/${treasureName}/${mentorName}/${companionName}/${villainName}/${eventLocation}`;
-            
-            const response = await fetch(url);
-            if (!response.ok) throw new Error('Story creation failed');
-            
-            const story = await response.text();
+            const story = await generateMadLib(
+                villageName,
+                characterAdj,
+                classType,
+                characterName,
+                year,
+                treasureName,
+                mentorName,
+                companionName,
+                villainName,
+                eventLocation
+            );
             setMessage(story);
         } catch (error) {
             console.error('Error:', error);

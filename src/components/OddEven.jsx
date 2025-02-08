@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import NavbarComponent from "./NavbarComponent";
+import { checkOddEven } from '../services/DataService';
 
 const OddEven = () => {
     const [number, setNumber] = useState('');
@@ -14,8 +15,7 @@ const OddEven = () => {
         }
 
         try {
-            const response = await fetch(`https://allforoneweb-g4fsepduf4ftc9fs.westus-01.azurewebsites.net/OddOrEven/Check/${inputNumber}`);
-            const result = await response.text();
+            const result = await checkOddEven(inputNumber);
             setMessage(result);
         } catch (error) {
             console.error('Error:', error);

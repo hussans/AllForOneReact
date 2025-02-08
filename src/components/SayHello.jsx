@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import NavbarComponent from "./NavbarComponent";
+import { greetUser } from '../services/DataService';
 
 const SayHello = () => {
     const [name, setName] = useState('');
@@ -12,9 +13,8 @@ const SayHello = () => {
         }
 
         try {
-            const response = await fetch(`https://allforoneweb-g4fsepduf4ftc9fs.westus-01.azurewebsites.net/HelloWorld/GreetUser/${name}`);
-            const text = await response.text();
-            setMessage(text);
+            const result = await greetUser(name);
+            setMessage(result);
         } catch (error) {
             console.error('Error:', error);
             setMessage("Failed to get greeting");
